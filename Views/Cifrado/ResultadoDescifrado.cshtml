@@ -1,0 +1,22 @@
+﻿@model CifradoModel
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white text-center">
+                    <h4 class="card-title">¡Texto Descifrado Exitosamente!</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="text-primary">Texto Descifrado:</h5>
+                    <p class="text-monospace bg-light p-3 rounded" style="word-wrap: break-word;">
+                        @Model.TextoOriginal
+                    </p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="@Url.Action("Index", "Cifrado")" class="btn btn-primary">Volver a Descifrar Otro Texto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

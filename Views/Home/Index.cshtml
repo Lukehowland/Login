@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container text-center my-5">
+    <!-- Título principal -->
+    <h1 class="display-3 fw-bold mb-3">Bienvenido a LukeCodificador!!!</h1>
+    <p class="lead mb-5">Una herramienta poderosa y fácil de usar para cifrar y descifrar textos, protegiendo tu información con seguridad.</p>
+    
+    <!-- Botón de Cifrar y Descifrar -->
+    <a href="@Url.Action("Index", "Cifrado")" class="btn btn-lg btn-success mb-5">Empezar a cifrar y descifrar!</a>
+
+
+    <!-- Sección de Guía del Usuario -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title text-success">Guia Cifrar Texto</h3>
+                    <p class="card-text">Protege tus mensajes con estos simples pasos:</p>
+                    <ul class="text-start">
+                        <li>Accede a la sección de Cifrado desde el menú de navegación.</li>
+                        <li>Introduce el texto que deseas cifrar.</li>
+                        <li>Selecciona el tamaño de la clave de cifrado (2, 4, 8, 16, o 32 bytes).</li>
+                        <li>Haz clic en el botón "Cifrar".</li>
+                        <li>Descarga el archivo cifrado y la tabla de cifrado ASCII.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title text-info">Guia Descifrar Texto</h3>
+                    <p class="card-text">Recupera tus mensajes cifrados fácilmente:</p>
+                    <ul class="text-start">
+                        <li>Accede a la sección de Descifrado desde el menú de navegación.</li>
+                        <li>Selecciona el archivo que contiene el texto cifrado.</li>
+                        <li>Selecciona la tabla de cifrado ASCII correspondiente.</li>
+                        <li>Haz clic en "Descifrar" para recuperar el texto original.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Quien Realizó Esto -->
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <img src="~/gigachad.png" alt="Foto de Lucas" style="max-width: 200px; height: auto;">
+        </div>
+        <div class="col-md-8 text-start">
+            <h2 class="h4">¿Quién creó esto?</h2>
+            <p>Este proyecto fue creado por el futuro ingeniero Lucas De La Quintana Montenegro de la Universidad Del Valle - UNIVALLE Santa Cruz.</p>
+            <a href="@Url.Action("SobreElInge", "About")" class="btn btn-info">Conoce más sobre Lucas</a>
+        </div>
+    </div>
+
+</div>
+<script>
+    // Mostrar un alert con el mensaje "Hello World" y el correo del usuario
+    var email = '@ViewBag.Email';
+    alert("Hello World!\nYour email: " + email);
+</script>

@@ -1,0 +1,32 @@
+﻿@model CifradoModel
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white text-center">
+                    <h4 class="card-title">¡Texto Cifrado Exitosamente!</h4>
+                </div>
+                <div class="card-body">
+                    <h5 class="text-primary">Texto Cifrado:</h5>
+                    <p class="text-monospace bg-light p-3 rounded" style="word-wrap: break-word;">
+                        @Model.TextoCifrado
+                    </p>
+
+                    <h5 class="mt-4 text-primary">Archivos Generados:</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="@ViewBag.RutaCifrado" download="cifrado.txt" class="btn btn-outline-success btn-sm">Descargar Texto Cifrado</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="@ViewBag.RutaTablaCifrado" download="tabla_cifrado.txt" class="btn btn-outline-success btn-sm">Descargar Tabla de Cifrado ASCII</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="@Url.Action("Index", "Cifrado")" class="btn btn-primary">Volver a Cifrar Otro Texto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

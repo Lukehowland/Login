@@ -1,0 +1,53 @@
+﻿@model CifradoModel
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="card-title">Cifrado de Texto</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Cifrar" method="post">
+                        <div class="form-group mb-3">
+                            <label for="texto">Texto a Cifrar:</label>
+                            <input type="text" id="texto" name="texto" class="form-control" placeholder="Ingresa el texto a cifrar" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="tamañoClave">Tamaño de la Clave:</label>
+                            <select id="tamañoClave" name="tamañoClave" class="form-select">
+                                <option value="2">2 bytes</option>
+                                <option value="4">4 bytes</option>
+                                <option value="8">8 bytes</option>
+                                <option value="16">16 bytes</option>
+                                <option value="32">32 bytes</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success">Cifrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="card-title">Descifrado de Texto</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Descifrar" method="post" enctype="multipart/form-data">
+                        <div class="form-group mb-3">
+                            <label for="archivoCifrado">Archivo Cifrado:</label>
+                            <input type="file" id="archivoCifrado" name="archivoCifrado" class="form-control" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="archivoTablaCifrado">Tabla de Cifrado ASCII:</label>
+                            <input type="file" id="archivoTablaCifrado" name="archivoTablaCifrado" class="form-control" />
+                        </div>
+                        <button type="submit" class="btn btn-warning">Descifrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
