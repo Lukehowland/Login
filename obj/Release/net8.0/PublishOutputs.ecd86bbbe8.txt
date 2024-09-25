@@ -1,0 +1,7 @@
+C:\Users\monte\class\LukeCodificador\publish\LukeCodificador.exe
+C:\Users\monte\class\LukeCodificador\publish\appsettings.Development.json
+C:\Users\monte\class\LukeCodificador\publish\appsettings.json
+C:\Users\monte\class\LukeCodificador\publish\LukeCodificador.dll
+C:\Users\monte\class\LukeCodificador\publish\LukeCodificador.deps.json
+C:\Users\monte\class\LukeCodificador\publish\LukeCodificador.runtimeconfig.json
+C:\Users\monte\class\LukeCodificador\publish\LukeCodificador.pdb
